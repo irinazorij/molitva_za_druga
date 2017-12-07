@@ -1,4 +1,4 @@
 class SpysoksController < ApplicationController
-  def new
+  def show
   end
 end
