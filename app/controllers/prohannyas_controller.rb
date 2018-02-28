@@ -1,12 +1,26 @@
 class ProhannyasController < ApplicationController
+
+  def index
+    @prohannyas = Prohannya.all
+  end
+
   def new
+    @prohannya = Prohannya.new
+  end
+
+  def show
   end
 
   def create
-    @prayer = prayer.new(prayer_params)
+    @prohannya = Prohannya.new(prohannya_params)
+    if @prohannya.save
+      redirect_to :action => "index"
+    else
+      render "new"
+    end
   end
 
-  def prayer_params
-      params.require(:prayer)
+  def prohannya_params
+      params.require(:prohannya).permit(:text)
     end
   end

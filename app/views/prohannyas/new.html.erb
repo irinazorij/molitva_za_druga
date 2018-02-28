@@ -1,0 +1,11 @@
+<% provide(:title, 'Ваше молитовне прохання') %>
+<h1>Ваше молитовне прохання</h1>
+
+<div class="row">
+<div class="span6 offset3">
+ <%= form_for(@prohannya) do |f|%>
+ <%= f.text_field :text %>
+ <%= f.submit "Додати до списку", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<h1>Список молитовних прохань</h1>
+  <%= @prohannyas.each do |p|%>
+   <p><%= p.text%></p>
+   <p><%= p.created_at %></p>
+   <%end%>
